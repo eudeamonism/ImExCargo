@@ -4,6 +4,7 @@ import { ChakraProvider, theme } from '@chakra-ui/react';
 import NavBar from './Components/NavBar/NavBar';
 import HomePage from './Components/Home/HomePage';
 import Services from './Components/Services/Services';
+import ContactUs from './Components/Contact/ContactUs'
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path='/home' element={<HomePage />}/>
             <Route path='/services' element={<Services />}/>
+            <Route path='/contact' element={<ContactUs />}/>
           </Routes>
         </main>
       </Router>
