@@ -7,19 +7,20 @@ import {
 
 const MContact = () => {
   return (
-    <VStack mt="40px">
+    <VStack mt="20px">
       <Flex
         maxW="350px"
-        bg={useColorModeValue("blue.100", "gray.700")}
+        bg={useColorModeValue('blue.100', 'gray.700')}
         borderRadius="20px"
         direction="column"
-        p="25px"
+        p="20px"
       >
         <Text fontSize="25px" fontWeight="bold">
           ImEx Cargo
         </Text>
-        <Text fontSize="16px">1R Newbury St, Peabody, MA 01960, USA</Text>
-
+        <Flex width="300px">
+          <Text fontSize="16px">1R Newbury St, Peabody, MA 01960, USA</Text>
+        </Flex>
         <Flex>
           <Text fontSize="16px" fontWeight="medium" mr="2">
             Phone
@@ -41,7 +42,7 @@ const MContact = () => {
         <Text fontSize="16px" fontWeight="normal">
           Mon-Fri: 9:00am-5:00pm
         </Text>
-        <Flex direction="column" gap="1" mt="2">
+        <Flex gap="1" mt="1" width="100%">
           <AiFillFacebook fontSize="25px" />
           <AiFillLinkedin fontSize="25px" />
           <AiFillTwitterSquare fontSize="25px" />

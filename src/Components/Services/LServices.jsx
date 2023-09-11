@@ -133,7 +133,7 @@ const LServices = () => {
             </Text>
           </Flex>
 
-          <Image src="/assets/gsa.jpg" alt="GSA/GSSA" height="250px" />
+          <Image src="/assets/Lgsa.jpg" alt="GSA/GSSA" maxW="900px" />
 
           <Flex px="5" width="100%" direction="column" mt="2">
             <Text
@@ -189,7 +189,7 @@ const LServices = () => {
             </Text>
           </Flex>
 
-          <Image src="/assets/federal.jpg" alt="GSA/GSSA" height="250px" />
+          <Image src="/assets/Lfederal.jpg" alt="GSA/GSSA" maxW="900px" />
 
           <Flex px="5" width="100%" direction="column" mt="2">
             <Text
