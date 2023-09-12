@@ -13,11 +13,13 @@ import {
   Divider,
   useToast,
 } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 import { Formik, Field, Form } from 'formik';
 import * as Yup from 'yup';
 
 const MForm = () => {
   const toast = useToast();
+  const navigate = useNavigate();
   return (
     <VStack mt="20px" mb="50px">
       <Flex
@@ -73,7 +75,7 @@ const MForm = () => {
               console.log('Hello!');
             }}
           >
-            {({ errors, isValid,dirty }) => (
+            {({ errors, isValid, dirty }) => (
               <Form as="form">
                 <VStack>
                   <FormControl isInvalid={!!errors.firstName}>
@@ -182,7 +184,7 @@ const MForm = () => {
                       noOfLines="5"
                       component="textarea"
                       rows="5"
-                      cols="37"
+                      cols="40"
                     />
 
                     <FormErrorMessage>{errors.message}</FormErrorMessage>
@@ -195,11 +197,12 @@ const MForm = () => {
                     width="full"
                     onClick={() => {
                       toast({
-                        title: 'Complaint Created',
+                        title: 'Message Sent!',
                         status: 'success',
                         isClosable: 'true',
                         duration: 6000,
                       });
+                      navigate('/home');
                     }}
                   >
                     Submit
