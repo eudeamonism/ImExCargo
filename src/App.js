@@ -6,6 +6,7 @@ import HomePage from './Components/Home/HomePage';
 import Services from './Components/Services/Services';
 import ContactUs from './Components/Contact/ContactUs'
 import DetailPage from './Components/Tracking/DetailPage'
+import Track from './Components/Tracking/Track/Track'
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path='/services' element={<Services />}/>
             <Route path='/contact' element={<ContactUs />}/>
             <Route path='/detail' element={<DetailPage />}/>
+            <Route path='/track' element={<Track />}/>
           </Routes>
         </main>
       </Router>
