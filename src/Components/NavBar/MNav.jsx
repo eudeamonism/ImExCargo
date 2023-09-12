@@ -56,10 +56,9 @@ const MNav = () => {
             variant="unstyled"
           />
           <MenuList color={useColorModeValue('#09406D', 'white')}>
+            <MenuItem>Home</MenuItem>
             <MenuItem>Services</MenuItem>
-            <MenuItem>Security</MenuItem>
-            <MenuItem>About Us</MenuItem>
-            <MenuItem>News</MenuItem>
+            <MenuItem>Tracking</MenuItem>
             <MenuItem>Contact Us</MenuItem>
           </MenuList>
         </Menu>
