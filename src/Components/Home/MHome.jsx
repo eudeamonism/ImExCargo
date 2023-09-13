@@ -23,7 +23,7 @@ const MHome = () => {
 
       <Flex justify="center" width="100%">
         <Image
-          src="/assets/imEx.png"
+          src="/assets/Services.jpg"
           alt="Shipment Services"
           width="100%"
           height="100%"
