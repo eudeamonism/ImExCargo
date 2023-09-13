@@ -38,58 +38,59 @@ const Track = () => {
             ImEx Tracking
           </Text>
         </VStack>
-
-        <Formik
-          initialValues={{ track: '' }}
-          validationSchema={Yup.object({
-            track: Yup.number()
-              .required('Enter tracking number!')
-              .typeError('Numbers only!'),
-          })}
-          onSubmit={values => {
-            console.log(values);
-          }}
+        <Flex
+          bg={useColorModeValue('blue.200', 'blue.600')}
+          p="25px"
+          borderRadius="10"
         >
-          {({ errors, isValid, dirty }) => (
-            <Form as="form">
-              <VStack
-                bg={useColorModeValue('blue.200', 'blue.600')}
-                p="25px"
-                borderRadius="10"
-              >
-                <FormControl isInvalid={!!errors.track}>
-                  <FormLabel
-                    color="light.600"
-                    _dark={{ color: 'dark.400' }}
-                    htmlFor="email"
-                    fontSize="20px"
+          <Formik
+            initialValues={{ track: '' }}
+            validationSchema={Yup.object({
+              track: Yup.number()
+                .required('Enter tracking number!')
+                .typeError('Numbers only!'),
+            })}
+            onSubmit={values => {
+              console.log(values);
+            }}
+          >
+            {({ errors, isValid, dirty }) => (
+              <Form as="form">
+                <VStack width="400px">
+                  <FormControl isInvalid={!!errors.track}>
+                    <FormLabel
+                      color="light.600"
+                      _dark={{ color: 'dark.400' }}
+                      htmlFor="email"
+                      fontSize="20px"
+                    >
+                      Tracking Number
+                    </FormLabel>
+                    <Field as={Input} id="track" name="track" type="text" />
+                    <FormErrorMessage>{errors.track}</FormErrorMessage>
+                  </FormControl>
+                  <Button
+                    type="submit"
+                    isDisabled={!isValid || !dirty}
+                    variant="solid"
+                    width="full"
+                    onClick={() => {
+                      toast({
+                        title: 'Tracking found!',
+                        status: 'success',
+                        isClosable: 'true',
+                        duration: 6000,
+                      });
+                      navigate('/detail');
+                    }}
                   >
-                    Tracking Number
-                  </FormLabel>
-                  <Field as={Input} id="track" name="track" type="text" />
-                  <FormErrorMessage>{errors.track}</FormErrorMessage>
-                </FormControl>
-                <Button
-                  type="submit"
-                  isDisabled={!isValid || !dirty}
-                  variant="solid"
-                  width="full"
-                  onClick={() => {
-                    toast({
-                      title: 'Tracking found!',
-                      status: 'success',
-                      isClosable: 'true',
-                      duration: 6000,
-                    });
-                    navigate('/detail');
-                  }}
-                >
-                  Submit
-                </Button>
-              </VStack>
-            </Form>
-          )}
-        </Formik>
+                    Submit
+                  </Button>
+                </VStack>
+              </Form>
+            )}
+          </Formik>
+        </Flex>
         <VStack>
           <Text fontSize="23px" fontWeight="semibold" mb="10px" mt="25px">
             FAQs
