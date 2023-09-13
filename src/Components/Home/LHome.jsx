@@ -20,12 +20,11 @@ const LHome = () => {
         </Text>
       </Flex>
 
-      <Flex justify="center" width="100%">
+      <Flex justify="center">
         <Image
           src="/assets/imEx.png"
           alt="Shipment Services"
-          width="100%"
-          height="100%"
+          maxW="800px"
         />
       </Flex>
       <Flex width="100%" height="100%" mt="1" mb="1" gap="1" justify="center">

@@ -10,6 +10,7 @@ import {
   Image,
   useColorModeValue,
   Button,
+  Link,
 } from '@chakra-ui/react';
 
 import { ColorModeSwitcher } from '../../ColorModeSwitcher';
@@ -26,7 +27,6 @@ const LNav = () => {
       pr="3"
       pl="3"
     >
-      {' '}
       <Image
         boxSize="80px"
         src="/assets/logou.png"
@@ -38,28 +38,28 @@ const LNav = () => {
         fontWeight="medium"
         color={useColorModeValue('#09406D', 'white')}
       >
-        Home
+        <Link href="/home">Home</Link>
       </Text>
       <Text
         fontSize="l"
         fontWeight="medium"
         color={useColorModeValue('#09406D', 'white')}
       >
-        Services
+        <Link href="/services">Services</Link>
       </Text>
       <Text
         fontSize="l"
         fontWeight="medium"
         color={useColorModeValue('#09406D', 'white')}
       >
-        Tracking
+        <Link href="/track">Tracking</Link>
       </Text>
       <Text
         fontSize="l"
         fontWeight="medium"
         color={useColorModeValue('#09406D', 'white')}
       >
-        Contact Us
+        <Link href="/contact">Contact Us</Link>
       </Text>
       <Button
         variant="outline"

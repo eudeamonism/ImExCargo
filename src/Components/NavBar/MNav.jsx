@@ -10,12 +10,15 @@ import {
   Image,
   useColorModeValue,
   Button,
+  Link,
 } from '@chakra-ui/react';
 
+import { useNavigate } from 'react-router-dom';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { ColorModeSwitcher } from '../../ColorModeSwitcher';
 
 const MNav = () => {
+  const navigate = useNavigate();
   return (
     <Flex
       bgGradient={useColorModeValue(
@@ -56,10 +59,20 @@ const MNav = () => {
             variant="unstyled"
           />
           <MenuList color={useColorModeValue('#09406D', 'white')}>
-            <MenuItem>Home</MenuItem>
-            <MenuItem>Services</MenuItem>
-            <MenuItem>Tracking</MenuItem>
-            <MenuItem>Contact Us</MenuItem>
+            <MenuItem>
+              <Link href="/home">Home</Link>
+            </MenuItem>
+            <MenuItem>
+              <Link href="/services">Services</Link>
+            </MenuItem>
+            <MenuItem>
+              <Link href="/track">Tracking</Link>
+            </MenuItem>
+            <MenuItem>
+              <Link
+              href="/contact"
+              >Contact Us</Link>
+            </MenuItem>
           </MenuList>
         </Menu>
       </Flex>
